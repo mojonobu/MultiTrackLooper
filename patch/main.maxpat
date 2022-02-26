@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 246.0, 87.0, 1702.0, 1118.0 ],
+		"rect" : [ 640.0, 152.0, 1705.0, 1111.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,14 +40,73 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-34",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 331.0, 1458.0, 34.0, 22.0 ],
+					"text" : "splat"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-33",
+					"maxclass" : "newobj",
+					"numinlets" : 2,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 489.0, 882.0, 29.5, 22.0 ],
+					"saved_object_attributes" : 					{
+						"embed" : 0
+					}
+,
+					"text" : "mtr"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-28",
 					"linecount" : 2,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 183.451227188110352, 1202.155164957046509, 177.906978607177734, 32.0 ],
-					"presentation_linecount" : 2,
-					"text" : "momentum使って遅延なしにしたい"
+					"patching_rect" : [ 175.858205795288086, 1191.402570605278015, 150.0, 32.0 ],
+					"text" : "clockを止めずに録音、プレイバックしたい"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-19",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 175.858205795288086, 1163.676161289215088, 284.0, 20.0 ],
+					"text" : "追加録音したい peek poke? overdub"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-6",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 1069.0, 199.0, 100.0, 22.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-30",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 0,
+					"patching_rect" : [ 49.0, 558.0, 32.0, 22.0 ],
+					"text" : "あど"
 				}
 
 			}
@@ -71,7 +130,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 422.209328174591064, 1351.847947955131531, 150.0, 32.0 ],
-					"presentation_linecount" : 2,
 					"text" : "record~トラック切り替え時に最初からになる"
 				}
 
@@ -123,21 +181,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 395.209328174591064, 1253.847947955131531, 150.0, 32.0 ],
-					"presentation_linecount" : 2,
 					"text" : "recordとplay両方をline~で制御する？"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-7",
-					"linecount" : 2,
-					"maxclass" : "comment",
-					"numinlets" : 1,
-					"numoutlets" : 0,
-					"patching_rect" : [ 395.209328174591064, 1186.402570605278015, 150.0, 32.0 ],
-					"presentation_linecount" : 2,
-					"text" : "recordのappendが動いてない気がする"
 				}
 
 			}
@@ -203,13 +247,13 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-10",
-					"linecount" : 3,
+					"linecount" : 2,
 					"maxclass" : "message",
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 815.0, 866.0, 50.0, 49.0 ],
-					"text" : "start 0 8000 8000"
+					"patching_rect" : [ 815.0, 866.0, 50.0, 35.0 ],
+					"text" : "0 9600 9600"
 				}
 
 			}
@@ -1404,7 +1448,7 @@
 					"maxclass" : "ezdac~",
 					"numinlets" : 2,
 					"numoutlets" : 0,
-					"patching_rect" : [ 647.576136112213135, 1558.039702415466309, 178.333328247070312, 178.333328247070312 ]
+					"patching_rect" : [ 582.576136112213135, 1633.039702415466309, 178.333328247070312, 178.333328247070312 ]
 				}
 
 			}
@@ -1727,6 +1771,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
+					"disabled" : 1,
 					"source" : [ "obj-224", 0 ]
 				}
 
@@ -1734,6 +1779,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
+					"disabled" : 1,
 					"source" : [ "obj-239", 0 ]
 				}
 
